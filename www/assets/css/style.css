@@ -1,0 +1,26 @@
+@-webkit-viewport{width:device-width}
+@-moz-viewport{width:device-width}
+@-ms-viewport{width:device-width}
+@-o-viewport{width:device-width}
+@viewport{width:device-width}
+
+a, .btn, .btn a{
+	outline: none!important;
+}
+
+
+/* LOGIN */
+.login{
+	text-align: center!important;
+	margin-top: 20px;
+}
+.login img{
+	width: 239px;
+	height: 97px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+.login .form-control{
+	margin-bottom: 10px;
+}
+/* LOGIN */
