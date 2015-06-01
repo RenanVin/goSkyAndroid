@@ -34,11 +34,25 @@
 			</form>
 
 			<form name="formRecup" class="formRecup" method="post" action="#">
-				<input class="form-control" type="text" name="userCelular" id="userCelular" placeholder="Digite seu celular" />
+				<input class="form-control" type="number" name="userCelular" id="userCelular" placeholder="Digite seu celular" />
 				<input type="submit" value="ENVIAR CÓDIGO" class="btn btn-primary" />
 				<br />
 				<br />
-				<a href="javascript:;" class="recuperar-senha">Voltar para login</a>
+				<div><a href="javascript:;" class="btn btn-default voltar-login">Já possuí um código?</a></div>
+				<br />
+				<a href="javascript:;" class="voltar-login">Voltar para login</a>
+			</form>
+
+			<form name="formChangePass" class="formChangePass" method="post" action="#">
+				<input class="form-control" type="number" name="changeCode" id="changeCode" placeholder="Código recebido por SMS" />
+
+				<input class="form-control" type="password" name="changeCode" id="changeCode" placeholder="Sua nova senha" />
+
+				<input class="form-control" type="password" name="changeCode" id="changeCode" placeholder="Confirme a senha" />
+				<input type="submit" value="ALTERAR SENHA" class="btn btn-primary" />
+				<br />
+				<br />
+				<a href="javascript:;" class="voltar-login">Voltar para login</a>
 			</form>
 		</div>
 
