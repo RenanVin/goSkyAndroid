@@ -56,9 +56,12 @@ $(document).ready(function(){
 				{
 					alert(result.MSG);
 
-					$(".formLogin").hide(0);
-					$(".formRecup").hide(0);
-					$(".formChangePass").show(0);
+					if(result.RETORNO == "sucesso")
+					{
+						$(".formLogin").hide(0);
+						$(".formRecup").hide(0);
+						$(".formChangePass").show(0);
+					}
 				} 
 			});
 		}
@@ -70,32 +73,31 @@ $(document).ready(function(){
 		$(this).val("Processando...");
 		$(".formChangePass input[type=submit]").addClass("disabled");
 
-		var userCelular = $("#userCelular").val();
+		var changeCode     = $("#changeCode").val();
+		var changePass     = $("#changePass").val();
+		var changePassConf = $("#changePassConf").val();
 
-		if(userCelular == false)
+		if(changeCode == false)
 		{
-			$("#userCelular").focus();
-			$(".formChangePass input[type=submit]").val("ENVIAR CÓDIGO");
+			$("#changeCode").focus();
+			$(".formChangePass input[type=submit]").val("ALTERAR SENHA");
+			$(".formChangePass input[type=submit]").removeClass("disabled");
+		}
+		else if(changePass == false)
+		{
+			$("#changePass").focus();
+			$(".formChangePass input[type=submit]").val("ALTERAR SENHA");
+			$(".formChangePass input[type=submit]").removeClass("disabled");
+		}
+		else if(changePassConf == false)
+		{
+			$("#changePassConf").focus();
+			$(".formChangePass input[type=submit]").val("ALTERAR SENHA");
 			$(".formChangePass input[type=submit]").removeClass("disabled");
 		}
 		else
 		{
-			$(this).val("ENVIAR CÓDIGO");
-			$(".formChangePass input[type=submit]").removeClass("disabled");
 			
-			$.ajax({ 
-				dataType : 'jsonp',
-				url      : "http://gosky.com.br/webservice/lostPassword.php?userCelular="+userCelular,
-				data     : $("form").serialize(),
-				success: function(result)
-				{
-					alert(result.MSG);
-
-					$(".formLogin").hide(0);
-					$(".formChangePass").hide(0);
-					$(".formChangePass").show(0);
-				} 
-			});
 		}
 	});
 
