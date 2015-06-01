@@ -64,4 +64,39 @@ $(document).ready(function(){
 		}
 	});
 
+	// POST ALTERAR SENHA
+	$(".formChangePass input[type=submit]").click(function(evento){
+		evento.preventDefault();
+		$(this).val("Processando...");
+		$(".formChangePass input[type=submit]").addClass("disabled");
+
+		var userCelular = $("#userCelular").val();
+
+		if(userCelular == false)
+		{
+			$("#userCelular").focus();
+			$(".formChangePass input[type=submit]").val("ENVIAR CÓDIGO");
+			$(".formChangePass input[type=submit]").removeClass("disabled");
+		}
+		else
+		{
+			$(this).val("ENVIAR CÓDIGO");
+			$(".formChangePass input[type=submit]").removeClass("disabled");
+			
+			$.ajax({ 
+				dataType : 'jsonp',
+				url      : "http://gosky.com.br/webservice/lostPassword.php?userCelular="+userCelular,
+				data     : $("form").serialize(),
+				success: function(result)
+				{
+					alert(result.MSG);
+
+					$(".formLogin").hide(0);
+					$(".formChangePass").hide(0);
+					$(".formChangePass").show(0);
+				} 
+			});
+		}
+	});
+
 });
