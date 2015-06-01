@@ -17,18 +17,7 @@
 		<script type="text/javascript" src="assets/js/jquery.js"></script>
 		<script type="text/javascript" src="assets/js/bootstrap.js"></script>
 		<script type="text/javascript" src="assets/js/posts.js"></script>
-		<script type="text/javascript">
-			if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-			    var msViewportStyle = document.createElement("style");
-			    msViewportStyle.appendChild(
-			        document.createTextNode(
-			            "@-ms-viewport{width:auto!important}"
-			        )
-			    );
-			    document.getElementsByTagName("head")[0].
-			        appendChild(msViewportStyle);
-			}
-		</script>
+		<script type="text/javascript" src="assets/js/functions.js"></script>
 	</head>
 	<body>
 
@@ -41,7 +30,15 @@
 				<input type="submit" value="ENTRAR" class="btn btn-primary" />
 				<br />
 				<br />
-				<a href="javascript:;">Esqueceu sua senha?</a>
+				<a href="javascript:;" class="recuperar-senha">Esqueceu sua senha?</a>
+			</form>
+
+			<form name="formRecup" class="formRecup" method="post" action="#">
+				<input class="form-control" type="text" name="userCelular" id="userCelular" placeholder="Digite seu celular" />
+				<input type="submit" value="ENVIAR CÓDIGO" class="btn btn-primary" />
+				<br />
+				<br />
+				<a href="javascript:;" class="recuperar-senha">Voltar para login</a>
 			</form>
 		</div>
 

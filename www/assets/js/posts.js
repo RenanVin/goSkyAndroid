@@ -9,8 +9,6 @@ $(document).ready(function(){
 		var userForm = $("#userLogin").val();
 		var passForm = $("#passLogin").val();
 
-		//alert(userForm);
-
 		if(userForm == false)
 		{
 			$("#userLogin").focus();
@@ -25,6 +23,8 @@ $(document).ready(function(){
 		}
 		else
 		{
+			$(this).val("ENTRAR");
+			$(".formLogin input[type=submit]").removeClass("disabled");
 			alert("ok");
 		}
 	});
