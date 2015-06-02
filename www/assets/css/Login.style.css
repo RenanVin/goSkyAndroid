@@ -1,0 +1,15 @@
+/* LOGIN */
+.login{
+	text-align: center!important;
+	margin-top: 20px;
+}
+.login img{
+	width: 239px;
+	height: 97px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+.login .form-control{
+	margin-bottom: 10px;
+}
+/* LOGIN */

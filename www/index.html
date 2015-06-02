@@ -8,16 +8,32 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-		<link href="assets/css/bootstrap.css" rel="stylesheet">
-		<link href="assets/css/style.css" rel="stylesheet">
+		<!-- App CSS -->
+		<link href="assets/css/App.bootstrap.css" rel="stylesheet">
+		<link href="assets/css/App.style.css" rel="stylesheet">
+
+		<!-- Login CSS -->
+		<link href="assets/css/Login.style.css" rel="stylesheet">
 		
 		<title>goSky</title>
 
+		<!-- App JavaScripts -->
 		<script type="text/javascript" src="cordova.js"></script>
-		<script type="text/javascript" src="assets/js/jquery.js"></script>
-		<script type="text/javascript" src="assets/js/bootstrap.js"></script>
-		<script type="text/javascript" src="assets/js/posts.js"></script>
-		<script type="text/javascript" src="assets/js/functions.js"></script>
+		<script type="text/javascript" src="assets/js/App.jquery.js"></script>
+		<script type="text/javascript" src="assets/js/App.mask.js"></script>
+		<script type="text/javascript" src="assets/js/App.bootstrap.js"></script>
+		<script type="text/javascript" src="assets/js/App.functions.js"></script>
+
+		<!-- Login JavaScripts -->
+		<script type="text/javascript" src="assets/js/Login.posts.js"></script>
+		<script type="text/javascript" src="assets/js/Login.functions.js"></script>
+
+		<script>
+			if(validaSession() == true)
+			{
+				location.href="inbox.html";
+			}
+		</script>
 	</head>
 	<body>
 
@@ -30,15 +46,17 @@
 				<input type="submit" value="ENTRAR" class="btn btn-primary" />
 				<br />
 				<br />
+				<div><a href="javascript:;" class="btn btn-default fazer-cadastro">FAÇA SEU CADASTRO</a></div>
+				<br />
 				<a href="javascript:;" class="recuperar-senha">Esqueceu sua senha?</a>
 			</form>
 
 			<form name="formRecup" class="formRecup" method="post" action="#">
-				<input class="form-control" type="number" name="userCelular" id="userCelular" placeholder="Digite seu celular" />
+				<input class="form-control" type="text" name="userCelular" id="userCelular" placeholder="Digite seu celular" />
 				<input type="submit" value="ENVIAR CÓDIGO" class="btn btn-primary" />
 				<br />
 				<br />
-				<div><a href="javascript:;" class="btn btn-default voltar-login">Já possuí um código?</a></div>
+				<div><a href="javascript:;" class="btn btn-default alterar-senha">Já possuí um código?</a></div>
 				<br />
 				<a href="javascript:;" class="voltar-login">Voltar para login</a>
 			</form>
@@ -53,6 +71,23 @@
 				<br />
 				<br />
 				<a href="javascript:;" class="voltar-login">Voltar para login</a>
+			</form>
+
+			<form name="formCadastro" class="formCadastro" method="post" action="#">
+				<input class="form-control" type="text" name="cadNome" id="cadNome" placeholder="Seu nome" />
+
+				<div class="form-group input-group" style="margin-bottom: 0px;">
+					<input onkeypress="javascript: lowCase(this);" type="text" class="form-control" name="cadLogin" id="cadLogin" placeholder="Escolha um login" />
+					<span class="input-group-addon">#goSky</span>
+				</div>
+
+				<input class="form-control" type="password" name="cadSenha" id="cadSenha" placeholder="Crie uma senha" />
+
+				<input class="form-control" type="password" name="cadSenhaRep" id="cadSenhaRep" placeholder="Repita sua senha" />
+				
+				<br />
+				<input type="submit" value="FINALIZAR CADASTRO" class="btn btn-primary" />
+				<br />
 			</form>
 		</div>
 

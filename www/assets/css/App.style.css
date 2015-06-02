@@ -1,0 +1,13 @@
+a, .btn, .btn a{
+	outline: none!important;
+	text-decoration: none!important;
+}
+
+.btn-default{
+	background-color: #eee!important;
+}
+
+.form-control{
+	font-family: "Roboto"!important;
+	font-size: 14px!important;
+}
