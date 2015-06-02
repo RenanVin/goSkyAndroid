@@ -1,9 +1,10 @@
 function validaSession()
 {
-	var login = window.localStorage.getItem("userLogin");
-	var pass  = window.localStorage.getItem("userPass");
+	var userID = window.localStorage.getItem("userID");
+	var login  = window.localStorage.getItem("userLogin");
+	var pass   = window.localStorage.getItem("userPass");
 
-	if(login == null || pass == null)
+	if(userID == null || login == null || pass == null)
 	{
 		return false;
 	}

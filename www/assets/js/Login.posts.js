@@ -48,6 +48,7 @@ $(document).ready(function(){
 					{
 
 						resetForms();
+						window.localStorage.setItem("userID", result.MSG);
 						window.localStorage.setItem("userLogin", loginExp);
 						window.localStorage.setItem("userPass",  passForm);
 
