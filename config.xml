@@ -1,13 +1,13 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="br.com.gosky" version="1.0.0">
   <name>goSky</name>
   <description>Via livre de spam</description>
-  <author href="http://phonegap.com" email="sac@gosky.com.br">Equipe goSky</author>
+  <author href="http://phonegap.com" email="sac@gosky.com.br">goSky</author>
   <content src="index.html"/>
   <preference name="permissions" value="none"/>
   <preference name="phonegap-version" value="3.7.0"/>
   <preference name="orientation" value="default"/>
   <preference name="target-device" value="universal"/>
-  <preference name="fullscreen" value="true"/>
+  <preference name="fullscreen" value="false"/>
   <preference name="webviewbounce" value="true"/>
   <preference name="prerendered-icon" value="true"/>
   <preference name="stay-in-webview" value="false"/>
