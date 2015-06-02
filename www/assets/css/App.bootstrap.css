@@ -15,6 +15,10 @@ html {
 body {
   margin: 0;
 }
+h1, h2{
+  margin: 0px!important;
+  padding: 0px!important;
+}
 article,
 aside,
 details,
@@ -47,6 +51,7 @@ template {
 }
 a {
   background-color: transparent;
+  outline: none!important;
 }
 a:active,
 a:hover {
@@ -6770,6 +6775,11 @@ body {
   -webkit-font-smoothing: antialiased;
   letter-spacing: .1px;
   text-rendering: optimizeLegibility;
+
+   -moz-user-select: none!important;
+  -khtml-user-select: none!important;
+  -webkit-user-select: none!important;
+  user-select: none!important;
 }
 p {
   margin: 0 0 1em;

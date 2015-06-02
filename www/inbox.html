@@ -40,7 +40,7 @@
 		<header>
 			
 			<div class="open-nav">
-				<a href="javascript:;"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
+				<a href="javascript:;" class="open-slide-menu"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
 				<p>Caixa de entrada</p>
 			</div>
 			
@@ -54,6 +54,24 @@
 			</form>
 
 		</header>
+
+		<div class="slide-menu">
+			<nav>
+				<ul>
+					<li><a href="inbox.html"><span class="glyphicon glyphicon-cloud-download"></span> Caixa de entrada</a></li>
+					<li><a href="enviados.html"><span class="glyphicon glyphicon-cloud-upload"></span> Enviados</a></li>
+					<li><a href="rascunhos.html"><span class="glyphicon glyphicon-floppy-disk"></span> Rascunhos</a></li>
+					<li><a href="lixeira.html"><span class="glyphicon glyphicon-trash"></span> Lixeira</a></li>
+				</ul>
+			</nav>
+			<hr />
+			<nav>
+				<ul>
+					<li><a href="inbox"><span class="glyphicon glyphicon-cog"></span> Configurações</a></li>
+					<li><a href="javascript:;" class="logout"><span class="glyphicon glyphicon-remove-sign"></span> Sair</a></li>
+				</ul>
+			</nav>
+		</div>
 		
 		<div class="container margin-container">
 			<div class="row inbox-list">
@@ -70,6 +88,16 @@
 			</div>
 		</div>
 
+		<div class="read-message">
+			<div class="menu">
+				<a href="javascript:;" class="pull-left close-read"><span class="glyphicon glyphicon-menu-left"></span> VOLTAR</a>
+				<a href="javascript:;" class="pull-right"><span class="glyphicon glyphicon-remove"></span> Deletar</a>
+				<a href="javascript:;" class="pull-right"><span class="glyphicon glyphicon-share-alt"></span> Responder</a>
+			</div>
+
+			<h1 class="lead"></h1>
+			<div class="text-message"></div>
+		</div>
 		
 	</body>
 </html>

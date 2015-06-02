@@ -1,3 +1,18 @@
+$(document).ready(function(){
+
+	// OPEN AND HIDE SLIDE MENU
+	$(".open-slide-menu").click(function(){
+		$(".slide-menu").fadeIn("fast");
+	});
+	
+	// LOGOU
+	$(".logout").click(function(){
+		window.localStorage.clear();
+		location.href="index.html";
+	});
+});
+
+
 function validaSession()
 {
 	var userID = window.localStorage.getItem("userID");
