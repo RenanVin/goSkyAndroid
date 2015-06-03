@@ -26,6 +26,7 @@ $(document).ready(function(){
 
 		$(".formRecup").hide(0);
 		$(".formChangePass").hide(0);
+		$(".formCadastro").hide(0);
 		$(".formLogin").show(0);
 	});
 

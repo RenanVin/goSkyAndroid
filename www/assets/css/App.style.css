@@ -90,6 +90,16 @@ header .formBusca a{
 .margin-container{
 	margin-top: 60px;
 }
+.bg-slide-menu{
+	background-image: url(../img/bg-slide-menu.png);
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 2200;
+	display: none;
+}
 .slide-menu{
 	position: fixed;
 	left: 0px;
@@ -97,8 +107,7 @@ header .formBusca a{
 	background-color: #fff!important;
 	height: 100%;
 	width: 250px;
-	z-index: 2700;
-	margin-top: 50px;
+	z-index: 2300;
 	padding: 10px;
 	display: none;
 	box-shadow: 1px 0px 5px #999;
@@ -109,8 +118,10 @@ header .formBusca a{
 }
 .slide-menu nav ul li{
 	list-style: none;
+	display: block;
+	width: 200px;
 }
-.slide-menu nav ul li a{
+.slide-menu nav ul li a, .slide-menu nav ul li a:hover, .slide-menu nav ul li a:focus{
 	color: #999!important;
 	margin-bottom: 4px;
 	display: block;

@@ -2,7 +2,13 @@ $(document).ready(function(){
 
 	// OPEN AND HIDE SLIDE MENU
 	$(".open-slide-menu").click(function(){
-		$(".slide-menu").fadeIn("fast");
+		$(".bg-slide-menu").fadeIn("fast");
+		$(".slide-menu").animate({width:'toggle'},350);
+	});
+
+	$(".bg-slide-menu").click(function(){
+		$(".bg-slide-menu").fadeOut("fast");
+		$(".slide-menu").animate({width:'hide'},350);
 	});
 	
 	// LOGOU

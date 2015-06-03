@@ -219,6 +219,9 @@ $(document).ready(function(){
 				data     : $("form").serialize(),
 				success: function(result)
 				{
+					$(".formCadastro input[type=submit]").val("FINALIZAR CADASTRO");
+					$(".formCadastro input[type=submit]").removeClass("disabled");
+
 					alert(result.MSG);
 
 					if(result.RETORNO == "sucesso")
