@@ -3,12 +3,12 @@ $(document).ready(function(){
 
 	var userID = window.localStorage.getItem("userID");
 
-	swal({   
-		title: "Processando solicitação",
-		text: "Aguarde...",
-		timer: 1000,
-		showConfirmButton: false 
-	});
+	// swal({   
+	// 	title: "Processando solicitação",
+	// 	text: "Aguarde...",
+	// 	timer: 1000,
+	// 	showConfirmButton: false 
+	// });
 
 	$.ajax({ 
 		dataType : 'jsonp',
