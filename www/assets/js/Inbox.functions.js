@@ -3,7 +3,12 @@ $(document).ready(function(){
 
 	var userID = window.localStorage.getItem("userID");
 
-	$(".inbox-list").html("Carregando...");
+	swal({   
+		title: "Processando solicitação",
+		text: "Aguarde...",
+		timer: 1000,
+		showConfirmButton: false 
+	});
 
 	$.ajax({ 
 		dataType : 'jsonp',
@@ -25,12 +30,9 @@ $(document).ready(function(){
 				createList.click(function(){
 				    var msgID = $(this).attr("data-msg-id");
 				    window.localStorage.setItem("read_inbox_id", msgID);
-
-				    location.href="read.html";
-
+					    location.href="read.html";
+					});
 				});
-
-			});
 
 		},
 		error: function()
@@ -39,11 +41,5 @@ $(document).ready(function(){
 		}
 	});
 
-	// CLOSE READ
-	$(".close-read").click(function(){
-		$(".read-message").fadeOut("fast");
-		$(".read-message .lead").html("");
-		$(".read-message .text-message").html("");
-	});
-
+	
 });
