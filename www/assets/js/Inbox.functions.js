@@ -21,29 +21,12 @@ $(document).ready(function(){
 				var createList = $('<div data-msg-id="'+ID+'" class="col-md-12 col-inbox"><img class="img-responsive" src="http://gosky.com.br/thumb.php?tipo=nor&w=40&h=30&img=uploads/'+login+'/profile.jpg" alt="'+login+'" /><span>'+login+'#goSky<b>'+assunto+'</b></span></div>');
 				$(".inbox-list").append(createList);
 
-				// READ MESSAGE
+				// GO READ PAGE
 				createList.click(function(){
-				    var msgID      = $(this).attr("data-msg-id");
-				    $(".read-message .lead").html("Carregando...");
+				    var msgID = $(this).attr("data-msg-id");
+				    window.localStorage.setItem("read_inbox_id", msgID);
 
-				    $.ajax({ 
-						dataType : 'jsonp',
-						url      : "http://gosky.com.br/webservice/readMessage.php?msgID="+msgID,
-						data     : $("form").serialize(),
-						success: function(result)
-						{
-							if(result.RETORNO == "erro")
-							{
-								alert("Erro ao buscar a mensagem, tente novamente.");
-							}
-							else
-							{
-								$(".read-message").fadeIn("fast");
-								$(".read-message .lead").html(result.ASSUNTO);
-								$(".read-message .text-message").html(result.MSG);
-							}
-						}
-					});
+				    location.href="read.html";
 
 				});
 
