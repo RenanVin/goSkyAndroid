@@ -28,18 +28,23 @@
 
 		<!-- Read JavaScripts -->
 		<script type="text/javascript" src="assets/js/Read.functions.js"></script>
-		<script type="text/javascript">swal("Ok")</script>
+	
 	</head>
 	<body>
 
-		<div class="read-message">
+		<header>
 			<div class="menu">
-				<a href="javascript: history.back(0);" class="pull-left close-read"><span class="glyphicon glyphicon-menu-left"></span> VOLTAR</a>
-				<a href="javascript:;" class="pull-right"><span class="glyphicon glyphicon-remove"></span> Deletar</a>
-				<a href="javascript:;" class="pull-right"><span class="glyphicon glyphicon-share-alt"></span> Responder</a>
+			<a href="javascript: history.back(0);" class="pull-left close-read"><span class="glyphicon glyphicon-menu-left"></span> VOLTAR</a>
+			<a href="javascript:;" class="pull-right"><span class="glyphicon glyphicon-remove"></span> Deletar</a>
+			<a href="javascript:;" class="pull-right responder"><span class="glyphicon glyphicon-share-alt"></span> Responder</a>
 			</div>
+		</header>
+
+		<div class="read-message">
 			
 			<h1 class="lead"></h1>
+			<div class="remetente"></div>
+			<div class="data"></div>
 			<div class="text-message"></div>
 
 		</div>

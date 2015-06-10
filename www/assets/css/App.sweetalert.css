@@ -18,7 +18,7 @@ body.stop-scrolling {
 
 .sweet-alert {
   background-color: white;
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   width: 478px;
   padding: 17px;
   border-radius: 5px;
@@ -40,7 +40,7 @@ body.stop-scrolling {
       right: 15px; } }
   .sweet-alert h2 {
     color: #575757!important;
-    font-family: "Lato"!important;
+    font-family: "Roboto"!important;
     font-size: 25px!important;
     text-align: center;
     font-weight: 300!important;
@@ -52,7 +52,7 @@ body.stop-scrolling {
     display: block; }
   .sweet-alert p {
     color: #797979;
-    font-family: "Lato"!important;
+    font-family: "Roboto"!important;
     font-size: 16px;
     text-align: center;
     font-weight: 300;
@@ -184,7 +184,7 @@ body.stop-scrolling {
     color: #ffffff!important;
     background-color: #59A446!important;
     border-color: #127ba3!important;
-    font-family: "Lato"!important;
+    font-family: "Roboto"!important;
   }
 
     .sweet-alert button:focus {

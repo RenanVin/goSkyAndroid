@@ -11,6 +11,9 @@
 .col-inbox img{
 	float: left;
 	margin-right: 10px;
+	width: 40px;
+	height: 30px;
+	background-color: #006A99!important;
 }
 .col-inbox span{
 	float: left;
