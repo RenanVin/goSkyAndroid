@@ -39,22 +39,27 @@
 	</head>
 	<body>
 
-	<a href="javascript:;" onclick="downloadFile();">download</a>
-
 		<div class="container login">
 			<img src="assets/img/logo.png" />
 			<p>Utilize sua conta para enviar mensagens e arquivos. Diga adeus a spam!</p>
-			<form name="formLogin" class="formLogin" method="post" action="#">
-				<input class="form-control" type="text" name="userLogin" id="userLogin" placeholder="usuario#goSky" />
-				<input class="form-control" type="password" name="passLogin" id="passLogin" placeholder="Senha" />
-				<input type="submit" value="ENTRAR" class="btn btn-primary" />
+			<form name="formCadastro" class="formCadastro" method="post" action="#">
+				<input class="form-control" type="text" name="cadNome" id="cadNome" placeholder="Seu nome" />
+
+				<div class="form-group input-group" style="margin-bottom: 0px;">
+					<input onkeypress="javascript: lowCase(this);" type="text" class="form-control" name="cadLogin" id="cadLogin" placeholder="Escolha um login" />
+					<span class="input-group-addon">#goSky</span>
+				</div>
+
+				<input class="form-control" type="password" name="cadSenha" id="cadSenha" placeholder="Crie uma senha" />
+
+				<input class="form-control" type="password" name="cadSenhaRep" id="cadSenhaRep" placeholder="Repita sua senha" />
+					
 				<br />
-				<br />
-				<div><a href="createAccount.html" class="btn btn-default fazer-cadastro">FAÇA SEU CADASTRO</a></div>
-				<br />
-				<a href="recuperarSenha.html" class="recuperar-senha">Esqueceu sua senha?</a>
+				<input type="submit" value="FINALIZAR CADASTRO" class="btn btn-primary" />
+				<br /><br />
+				<a href="index.html" class="voltar-login">Voltar para login</a>
 			</form>
 		</div>
-		
+
 	</body>
 </html>

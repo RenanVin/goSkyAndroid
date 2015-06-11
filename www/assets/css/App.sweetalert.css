@@ -20,8 +20,8 @@ body.stop-scrolling {
   background-color: white;
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   width: 478px;
-  padding: 17px;
-  border-radius: 5px;
+  padding: 13px!important;
+  border-radius: 0px!important;
   text-align: center;
   position: fixed;
   left: 50%;
@@ -41,7 +41,7 @@ body.stop-scrolling {
   .sweet-alert h2 {
     color: #575757!important;
     font-family: "Roboto"!important;
-    font-size: 25px!important;
+    font-size: 17px!important;
     text-align: center;
     font-weight: 300!important;
     text-transform: none;
@@ -177,12 +177,12 @@ body.stop-scrolling {
   font-size: 15px!important;
   font-weight: bold!important;
   text-transform: uppercase!important;
-  padding: 3px 12px!important;
-  margin-top: 10px!important;
+  padding: 5px!important;
+  margin-top: 5px!important;
   border-radius: 0px!important;
   font-weight: normal!important;
-    color: #ffffff!important;
-    background-color: #59A446!important;
+    color: #0D87E9!important;
+    background-color: #fff!important;
     border-color: #127ba3!important;
     font-family: "Roboto"!important;
   }

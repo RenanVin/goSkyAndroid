@@ -39,22 +39,19 @@
 	</head>
 	<body>
 
-	<a href="javascript:;" onclick="downloadFile();">download</a>
-
 		<div class="container login">
 			<img src="assets/img/logo.png" />
 			<p>Utilize sua conta para enviar mensagens e arquivos. Diga adeus a spam!</p>
-			<form name="formLogin" class="formLogin" method="post" action="#">
-				<input class="form-control" type="text" name="userLogin" id="userLogin" placeholder="usuario#goSky" />
-				<input class="form-control" type="password" name="passLogin" id="passLogin" placeholder="Senha" />
-				<input type="submit" value="ENTRAR" class="btn btn-primary" />
+
+			<form name="formRecup" class="formRecup" method="post" action="#">
+				<input class="form-control" type="tel" name="userCelular" id="userCelular" placeholder="Digite seu celular" />
+				<input type="submit" value="ENVIAR CÓDIGO" class="btn btn-primary" />
 				<br />
 				<br />
-				<div><a href="createAccount.html" class="btn btn-default fazer-cadastro">FAÇA SEU CADASTRO</a></div>
+				<div><a href="changePassword.html" class="btn btn-default alterar-senha">Já possuí um código?</a></div>
 				<br />
-				<a href="recuperarSenha.html" class="recuperar-senha">Esqueceu sua senha?</a>
+				<a href="index.html" class="voltar-login">Voltar para login</a>
 			</form>
 		</div>
-		
 	</body>
 </html>

@@ -1,13 +1,5 @@
 $(document).ready(function(){
 
-	function resetForms()
-	{
-		document.formRecup.reset();
-		document.formLogin.reset();
-		document.formChangePass.reset();
-		document.formCadastro.reset();
-	}
-
 	// POST LOGIN
 	$(".formLogin input[type=submit]").click(function(evento){
 		evento.preventDefault();
@@ -57,7 +49,7 @@ $(document).ready(function(){
 					else
 					{
 						window.localStorage.clear();
-						alert(result.MSG);
+						swal(result.MSG);
 					}
 				} 
 			});
@@ -68,42 +60,42 @@ $(document).ready(function(){
 	// POST RECUP
 	$(".formRecup input[type=submit]").click(function(evento){
 		evento.preventDefault();
-		$(this).val("Processando...");
-		$(".formRecup input[type=submit]").addClass("disabled");
+		
+			var userCelular = $("#userCelular").val();
 
-		var userCelular = $("#userCelular").val();
-
-		if(userCelular == false)
-		{
-			$("#userCelular").focus();
-			$(".formRecup input[type=submit]").val("ENVIAR CÓDIGO");
-			$(".formRecup input[type=submit]").removeClass("disabled");
-		}
-		else
-		{
-			$(this).val("ENVIAR CÓDIGO");
-			$(".formRecup input[type=submit]").removeClass("disabled");
-			
-			$.ajax({ 
-				dataType : 'jsonp',
-				url      : "http://gosky.com.br/webservice/lostPassword.php?userCelular="+userCelular,
-				data     : $("form").serialize(),
-				success: function(result)
-				{
-					alert(result.MSG);
-
-					if(result.RETORNO == "sucesso")
-					{
-
-						resetForms();
-
-						$(".formLogin").hide(0);
-						$(".formRecup").hide(0);
-						$(".formChangePass").show(0);
-					}
-				} 
-			});
-		}
+			if(userCelular == "" || userCelular == false || userCelular == null)
+			{
+				$("#userCelular").focus();
+				swal.close();
+			}
+			else
+			{
+				swal({   
+					title: "Processando solicitação",
+					text: "Aguarde...",
+					timer: 1000,
+					showConfirmButton: false 
+				},
+				function continueRequest(){
+					$.ajax({ 
+						dataType : 'jsonp',
+						url      : "http://gosky.com.br/webservice/lostPassword.php?userCelular="+userCelular,
+						data     : $("form").serialize(),
+						success: function(result)
+						{
+							//swal.close();
+							swal(result.MSG);
+								
+							if(result.RETORNO == "sucesso")
+							{
+								location.href="changePassword.html";
+							}
+						} 
+					});
+				});
+			}
+		
+	
 	});
 
 	// POST ALTERAR SENHA
@@ -136,8 +128,9 @@ $(document).ready(function(){
 		}
 		else if(changePass != changePassConf)
 		{
-			alert("As senhas não conferem, verifique!");
 			$("#changePassConf").focus();
+			swal("As senhas não conferem, verifique!");
+			swal("As senhas não conferem, verifique!");
 			$(".formChangePass input[type=submit]").val("ALTERAR SENHA");
 			$(".formChangePass input[type=submit]").removeClass("disabled");
 		}
@@ -152,17 +145,11 @@ $(document).ready(function(){
 				data     : $("form").serialize(),
 				success: function(result)
 				{
-					alert(result.MSG);
+					swal(result.MSG);
 
 					if(result.RETORNO == "sucesso")
 					{
-
-						resetForms();
-
-						$(".formLogin").show(0);
-						$(".formRecup").hide(0);
-						$(".formChangePass").hide(0);
-						$(".formCadastro").hide(0);
+						location.href="index.html";
 					}
 				} 
 			});
@@ -206,8 +193,9 @@ $(document).ready(function(){
 		}
 		else if(cadSenha != cadSenhaRep)
 		{
-			alert("As senhas não conferem, verifique!");
 			$("#cadSenhaRep").focus();
+			swal("As senhas não conferem, verifique!");
+
 			$(".formCadastro input[type=submit]").val("FINALIZAR CADASTRO");
 			$(".formCadastro input[type=submit]").removeClass("disabled");
 		}
@@ -222,12 +210,10 @@ $(document).ready(function(){
 					$(".formCadastro input[type=submit]").val("FINALIZAR CADASTRO");
 					$(".formCadastro input[type=submit]").removeClass("disabled");
 
-					alert(result.MSG);
+					swal(result.MSG);
 
 					if(result.RETORNO == "sucesso")
 					{
-
-						resetForms();
 
 						location.href="inbox.html";
 					}
