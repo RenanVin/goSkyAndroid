@@ -13,8 +13,8 @@
 		<link href="assets/css/App.sweetalert.css" rel="stylesheet">
 		<link href="assets/css/App.style.css" rel="stylesheet">
 
-		<!-- Read CSS -->
-		<link href="assets/css/Read.style.css" rel="stylesheet">
+		<!-- Answer CSS -->
+		<link href="assets/css/Answer.style.css" rel="stylesheet">
 		
 		<title>goSky</title>
 
@@ -26,27 +26,45 @@
 		<script type="text/javascript" src="assets/js/App.sweetalert.js"></script>
 		<script type="text/javascript" src="assets/js/App.functions.js"></script>
 
-		<!-- Read JavaScripts -->
-		<script type="text/javascript" src="assets/js/Read.functions.js"></script>
+		<!-- Answer JavaScripts -->
+		<script type="text/javascript" src="assets/js/Answer.functions.js"></script>
 	
 	</head>
 	<body>
 
 		<header>
 			<div class="menu">
-			<a href="javascript: history.back(0);" class="pull-left close-read"><span class="glyphicon glyphicon-menu-left"></span> Voltar</a>
-			<a href="javascript:;" class="pull-right"><span class="glyphicon glyphicon-remove"></span> Deletar</a>
-			<a href="answer.html" class="pull-right responder"><span class="glyphicon glyphicon-share-alt"></span> Responder</a>
+			<a href="javascript: history.back(0);" class="pull-left close-read"><span class="glyphicon glyphicon-menu-left"></span> Cancelar</a>
+			<a href="answer.html" class="pull-right responder"><span class="glyphicon glyphicon-share-alt"></span> Enviar</a>
 			</div>
 		</header>
 
-		<div class="read-message">
-			
-			<h1 class="lead"></h1>
-			<div class="remetente"></div>
-			<div class="data"></div>
-			<div class="text-message"></div>
+		<div class="container">
+			<div class="answer-message">
+				
+				<form name="formAsnwer" class="formAsnwer" method="post" action="#">
+					
+					<div class="row">
+						<div class="col-md-12">
+							<b>De</b>
+							<input type="text" class="form-control" value="renan#gosky" />
+							<br />
+						</div>
+						<div class="col-md-12">
+							<b>Para</b>
+							<input type="text" class="form-control" value="jair#gosky" />
+							<br />
+						</div>
+						<div class="col-md-12">
+							<b>Assunto</b>
+							<input type="text" class="form-control" value="Re: Material para o site" />
+							<br />
+						</div>
+					</div>
 
+				</form>
+
+			</div>
 		</div>
 
 	</body>

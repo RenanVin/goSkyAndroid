@@ -1,0 +1,26 @@
+.menu{
+	background-color: #006A99;
+	height: 50px;
+	display: block;
+	z-index: 1500;
+}
+.menu a{
+	color: #E1F7FF!important;
+	padding: 5px;
+	display: block;
+	margin-top: 8px;
+	background-color: #005579!important;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.answer-message{
+	padding: 10px;	
+	margin-top: 60px;
+}
+.answer-message .form-control{
+	height: 25px!important;
+}
+.answer-message b{
+	font-size: 11px;
+	font-weight: normal!important;
+}
