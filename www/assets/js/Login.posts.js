@@ -39,7 +39,6 @@ $(document).ready(function(){
 					if(result.RETORNO == "sucesso")
 					{
 
-						resetForms();
 						window.localStorage.setItem("userID", result.MSG);
 						window.localStorage.setItem("userLogin", loginExp);
 						window.localStorage.setItem("userPass",  passForm);
