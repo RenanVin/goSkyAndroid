@@ -32,41 +32,41 @@
 	</head>
 	<body>
 
-		<header>
-			<div class="menu">
-			<a href="javascript: history.back(0);" class="pull-left close-read"><span class="glyphicon glyphicon-menu-left"></span> Cancelar</a>
-			<a href="answer.html" class="pull-right responder"><span class="glyphicon glyphicon-share-alt"></span> Enviar</a>
-			</div>
-		</header>
+		<form name="formAsnwer" class="formAsnwer" method="post" action="#">
 
-		<div class="container">
-			<div class="answer-message">
-				
-				<form name="formAsnwer" class="formAsnwer" method="post" action="#">
+			<header>
+				<div class="menu">
+				<a href="javascript: history.back(0);" class="pull-left close-read"><span class="glyphicon glyphicon-menu-left"></span> Cancelar</a>
+				<a href="javascript:;" class="pull-right responder enviar"><span class="glyphicon glyphicon-share-alt"></span> Enviar</a>
+				</div>
+			</header>
+
+			<div class="container">
+				<div class="answer-message">
 					
-					<div class="row">
-						<div class="col-md-12">
-							<b>DE</b>
-							<input type="text" class="form-control no-height-input remetente" />
+						<div class="row">
+							<div class="col-md-12">
+								<b>DE</b>
+								<input type="text" class="form-control no-height-input remetente" />
+							</div>
+							<div class="col-md-12">
+								<b>PARA</b>
+								<input name="destino" id="destino" type="text" class="form-control no-height-input destino" />
+							</div>
+							<div class="col-md-12">
+								<b>ASSUNTO</b>
+								<input name="assunto" id="assunto" type="text" class="form-control no-height-input assunto" />
+							</div>
+							<div class="col-md-12">
+								<textarea name="msg" id="msg" class="form-control" rows="7" placeholder="Digite sua mensagem"></textarea>
+								<br />
+							</div>
 						</div>
-						<div class="col-md-12">
-							<b>PARA</b>
-							<input name="destino" type="text" class="form-control no-height-input destino" />
-						</div>
-						<div class="col-md-12">
-							<b>ASSUNTO</b>
-							<input name="assunto" type="text" class="form-control no-height-input assunto" />
-						</div>
-						<div class="col-md-12">
-							<textarea name="msg" class="form-control" rows="7" placeholder="Digite sua mensagem"></textarea>
-							<br />
-						</div>
-					</div>
 
-				</form>
-
+				</div>
 			</div>
-		</div>
+
+		</form>
 
 	</body>
 </html>

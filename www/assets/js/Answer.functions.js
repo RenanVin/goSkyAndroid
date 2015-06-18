@@ -11,7 +11,11 @@ $(document).ready(function(){
 	$(".destino").val(destino);
 	$(".assunto").val("Re: "+assunto);
 
-	// $().click(function(){
+	$(".enviar").click(function(){
 		
-	// });
+		var remetenteForm = $("#remetente").val();
+		var destinoForm   = $("#destino").val();
+
+		alert(destinoForm);
+	});
 });
