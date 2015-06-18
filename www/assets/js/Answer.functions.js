@@ -11,5 +11,7 @@ $(document).ready(function(){
 	$(".destino").val(destino);
 	$(".assunto").val("Re: "+assunto);
 
-	
+	// $().click(function(){
+		
+	// });
 });
