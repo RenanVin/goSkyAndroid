@@ -1,33 +1,15 @@
 $(document).ready(function(){
 	
-	// var msgID = window.localStorage.getItem("read_inbox_id");
+	var msgID     = window.localStorage.getItem("answerMsgID");
+	var remetente = window.localStorage.getItem("userLogin");
+	var destino   = window.localStorage.getItem("answerDestino");
+	var assunto   = window.localStorage.getItem("answerAssunto");
 
-	// $(".read-message").hide(0);
+	var remetenteConv = remetente.replace(",", "#");
 
-	// swal({   
-	// 	title: "Processando solicitação",
-	// 	text: "Aguarde...",
-	// 	timer: 1000,
-	// 	showConfirmButton: false 
-	// },
-	// function continueRequest(){
-		
-	// 	$.ajax({ 
-	// 		dataType : 'jsonp',
-	// 		url      : "http://gosky.com.br/webservice/readMessage.php?msgID="+msgID,
-	// 		data     : $("form").serialize(),
-	// 		success: function(result)
-	// 		{
-	// 			$(".lead").html(result.ASSUNTO);
-	// 			$(".remetente").html("De: <strong>"+result.REMETENTE+"</strong>");
-	// 			$(".data").html("Em: <strong>"+result.DATA+"</strong>");
-	// 			$(".lead").html(result.ASSUNTO);
-	// 			$(".text-message").html(result.MSG);
+	$(".remetente").val(remetenteConv);
+	$(".destino").val(destino);
+	$(".assunto").val("Re: "+assunto);
 
-	// 			$(".read-message").fadeIn("slow");
-	// 			swal.close();
-	// 		}
-	// 	});
-	// });
-
+	
 });
