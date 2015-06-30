@@ -15,11 +15,20 @@ $(document).ready(function(){
 	$(".enviar").click(function(){
 		
 		var destinoForm   = $("#destino").val();
+		var assuntoForm   = $("#assunto").val();
 		var msgForm       = $("#msg").val();
 
 		if(destinoForm == null || destinoForm == "")
 		{
-			
+			$("#destino").focus();
+		}
+		else if(assuntoForm == null || assuntoForm == "")
+		{
+			$("#assunto").focus();
+		}
+		else if(msgForm == null || msgForm == "")
+		{
+			$("#msg").focus();
 		}
 	});
 });
