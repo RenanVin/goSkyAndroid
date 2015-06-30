@@ -30,5 +30,9 @@ $(document).ready(function(){
 		{
 			$("#msg").focus();
 		}
+		else
+		{
+			
+		}
 	});
 });
